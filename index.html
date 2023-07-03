@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Light/Dark Theme</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Light/Dark Theme</h1>
+
+  <label for="themeToggle">Dark Mode:</label>
+  <input type="checkbox" id="themeToggle">
+
+  <p>This is some sample text.</p>
+
+  <script>
+    const checkbox = document.getElementById('themeToggle');
+
+    checkbox.addEventListener('change', function() {
+      const body = document.body;
+
+      if (checkbox.checked) {
+        body.classList.add('dark');
+      } else {
+        body.classList.remove('dark');
+      }
+    });
+  </script>
+</body>
+</html>
